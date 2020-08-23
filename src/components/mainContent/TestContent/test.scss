@@ -1,0 +1,145 @@
+.test__container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90vw;
+
+    &-card {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .test__container-backCard {
+            position: relative;
+            height: 15rem;
+            width: 13rem;
+            margin: 0 3rem;
+
+            .backCard__container-test {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: all 1s;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                align-items: center;
+                box-shadow: .5rem .5rem 1rem rgba(58, 56, 56, 0.377);
+                img {
+                    height: 10rem;
+                    width: 10rem;
+                }
+                transition: all .5s;
+                animation: comeout ease-in 1s;
+            }
+        }
+    }
+
+    &-start {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orchid;
+        border-radius: 50%;
+        transition: all .5s;
+    }
+
+    &-form {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test__result {
+        color: green;
+        text-shadow: 1px 1px 5px white;
+    }
+
+    .test__form {
+        padding: 2rem 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background:
+        radial-gradient(circle farthest-side at 0% 50%,#fb1 23.5%,rgba(240,166,17,0) 0)21px 30px,
+        radial-gradient(circle farthest-side at 0% 50%,#B71 24%,rgba(240,166,17,0) 0)19px 30px,
+        linear-gradient(#fb1 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#fb1 0)0 0,
+        linear-gradient(150deg,#fb1 24%,#B71 0,#B71 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#B71 0,#B71 76%,#fb1 0)0 0,
+        linear-gradient(30deg,#fb1 24%,#B71 0,#B71 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#B71 0,#B71 76%,#fb1 0)0 0,
+        linear-gradient(90deg,#B71 2%,#fb1 0,#fb1 98%,#B71 0%)0 0 #fb1;
+        background-size: 40px 60px;
+
+
+        &-input {
+            padding: .8rem 2.5rem;
+            font-size: 2rem;
+            color: green;
+            margin-right: 2rem;
+            border-radius: 10rem;
+            border: none;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        &-btn {
+            padding:1rem 2rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            background-color: #0a97b0;
+            box-shadow: inset 2px 2px .5rem white, inset -3px -3px .5rem #1b6ca8;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+
+            &.start {
+                padding: 1rem 1rem;
+                background-color: rgb(4, 156, 4);
+                color: white;
+                font-size: 2rem;
+                border: none;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-transform: uppercase;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                box-shadow: inset 5px 5px 1rem white, inset -3px -3px 1rem #0e5505;
+
+                &:active {
+                    background-color: darken(rgb(4, 156, 4), $amount: 10);
+                    transform: translateY(-2px);
+                }
+
+            }
+            
+        }
+    }
+}
+
+@keyframes turnaround {
+    0% {
+        height: 10rem;
+        width: 10rem;
+    }
+    50% {
+        box-shadow: 1rem 1rem 10rem orangered, -1rem -1rem 10rem orangered;
+        top: 11rem;
+    }
+
+
+    100% {
+        height: 10rem;
+        width: 10rem;
+    }
+}

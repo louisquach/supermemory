@@ -1,0 +1,12 @@
+.homepage__container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, min-content) minmax(max-content, 100vw) min-content;
+    grid-template-rows:max-content minmax(max-content, 100vh);
+    background:linear-gradient(to right, rgba(#ff427f, .7), rgba(#79d70f,.7)), url('../../image/brain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}

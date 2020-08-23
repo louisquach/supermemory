@@ -1,0 +1,53 @@
+.navbar_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.411);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+
+    .navbar_icon {
+        position: relative;
+        margin-right: 3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        .nav__user {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+            background-color:#14b1ab ;
+            text-align: center;
+
+            img {
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 50%;
+                background-color: #f2f7f5;
+            }
+
+            h5 {
+                display: inline-block;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    
+
+   
+
+}

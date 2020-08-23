@@ -1,0 +1,19 @@
+.frontCard__container {
+    height: 100%;
+    width: 100%;
+    background-color: chocolate;
+    backface-visibility: hidden;
+    perspective: 350rem;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .3rem .3rem .5rem rgb(78, 77, 77);
+
+
+    .frontCard_detail {
+        color: white;
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,16 @@
+.learn__container {
+    position: relative;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    &-num {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 85%;
+        width: 90%;
+    }
+}

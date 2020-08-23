@@ -1,0 +1,34 @@
+.sidebar__item-container {
+    height: 3rem;
+    width: 80%;
+    margin-top: 4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: .3rem .3rem .5rem rgba(#3333, .7);
+
+    &:hover .sidebar__item {
+        transform: skewX(15deg);
+    }
+
+    &:active {
+        background-color: darken(#3333, .7);
+    }
+
+    .sidebar__item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+        &-name {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+        }
+    }
+}

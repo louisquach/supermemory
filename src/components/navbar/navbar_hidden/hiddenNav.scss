@@ -1,0 +1,52 @@
+.navbar_detail {
+    position: relative;
+    display: flex;
+    width: 0;
+    height: auto;
+    margin-right: .5rem;
+    border-radius: 1rem;
+
+    &-signIn,
+    &-signOut {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        height: 2rem;
+        padding: .5rem 1rem;
+        border: none;
+        color: white;
+        background-color: rgba($color: #20f8e6, $alpha: .8);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all .1s;
+        animation: appears ease-in-out .1s ;
+        backface-visibility: hidden;
+        border-radius: 1rem;
+        a,
+        a:active,
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+        &:hover {
+            box-shadow: 1px 1px 3px #f3f4f5,
+                        -1px -1px 3px #f8fafc;
+        }
+
+    
+    }
+}
+
+@keyframes appears {
+    0% {
+        width: 0;
+        font-size: 0;
+    }
+
+    100% {
+        width: auto;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,30 @@
+.backCard__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    background-color: white;
+    perspective: 1000rem;
+    box-shadow: .3rem .3rem .5rem rgba(121, 114, 114, 0.377);
+    img {
+        height: 10rem;
+        width: 10rem;
+    }
+}
+
+
+
+@keyframes comeout {
+    0% {
+        opacity: 0;
+    }
+
+    100%{opacity: 1; }
+}

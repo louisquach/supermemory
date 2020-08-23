@@ -1,0 +1,32 @@
+.card__container {
+    position: relative;
+    height: 15rem;
+    width: 13rem;
+    margin: -4rem 3rem 2rem;
+    transition: all .6s;
+    animation: appear ease-in .5s ;
+
+    &:hover {
+        transform:  scale(1.2);
+    }
+
+    &:hover .frontCard__container {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .backCard__container {
+        transform: rotateY(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

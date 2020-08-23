@@ -1,0 +1,36 @@
+.footer_container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-column: 1 / 6;
+    padding: 1rem auto .5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+    &-content {
+        color: white;
+        letter-spacing: 2px;
+        display: inline-block;
+
+        .copyright {
+            display: inline-block;
+            width: auto;
+            font-size: 1.6rem;
+            margin-right: 2px;
+        }
+
+        .footer-name {
+            display: inline-block;
+            width: auto;
+        }
+
+        &:hover .footer-name {
+            background-color: #17161b;
+            box-shadow: 2px 2px 5px rgba(black, .8);
+            transform: scale(1.1) skewX(-10deg);
+        }
+    }
+    
+   
+}
+

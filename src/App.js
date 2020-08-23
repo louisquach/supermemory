@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SignInSignUp from './pages/signin_signup-page/SignInSignUp_page';
+import {Switch, Route, Redirect} from 'react-router-dom';
+import HomePage from './pages/homepage/homepage';
+import { auth, createUserProfile } from './firebase/firebaseConfig';
+import { catchUser } from './redux/user/userReducer';
+import {connect} from 'react-redux';
 
-function App() {
+function App(props) {
+  const [detectUser, setDetectUser] = React.useState(null);
+  const {catchUser, checkUser} = props
+
+  React.useEffect( () => {
+    setDetectUser( () => {auth.onAuthStateChanged( async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfile(userAuth);
+        userRef.onSnapshot( snapshot => {
+          catchUser({
+            id: snapshot.id,
+            ...snapshot.data()
+          })
+        })
+      }
+      catchUser(userAuth);
+    });
+    });
+    setDetectUser();
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Switch>
+            <Route exact path='/' component={HomePage}/>
+            <Route exact path="/signin" render={ () => checkUser ? <Redirect to='/'/> : <SignInSignUp/>}/>
+        </Switch>
     </div>
   );
 }
 
-export default App;
+const dispatchStateToProps = dispatch => ({
+  catchUser: user => dispatch(catchUser(user))
+})
+const mapStateToProps = state => ({
+  checkUser: state.user.currentUser
+})
+export default connect(mapStateToProps,dispatchStateToProps)(App);
